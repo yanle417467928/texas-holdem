@@ -1,7 +1,7 @@
 package com.yanle.texasholdem;
 
 import com.yanle.texasholdem.model.Player;
-import com.yanle.texasholdem.model.ranking.Dealer;
+import com.yanle.texasholdem.model.Dealer;
 import junit.framework.TestCase;
 import org.junit.Test;
 

@@ -14,7 +14,7 @@ import java.util.List;
 public class RankingFacade implements IRanking {
 
     private final static List<IRanking> rankings = new ArrayList<IRanking>();
-    private static RankingFacade instance = null;
+    private volatile static RankingFacade instance = null;
     private final static Object lock = new Object();
 
     static {
@@ -46,14 +46,14 @@ public class RankingFacade implements IRanking {
     }
 
     public RankingResult resolve(Player player) {
-        RankingResult result = null;
+        RankingResult result;
         for (IRanking ranking : RankingFacade.rankings) {
             result = ranking.resolve(player);
             if (result != null) {
                 return result;
             }
         }
-        return result;
+        return null;
     }
 
 }

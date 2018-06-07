@@ -1,9 +1,10 @@
-package com.yanle.texasholdem.model.ranking;
+package com.yanle.texasholdem.model;
 
 
 import com.yanle.texasholdem.constant.Constants;
 import com.yanle.texasholdem.model.Player;
 import com.yanle.texasholdem.model.PokerSuit;
+import com.yanle.texasholdem.model.ranking.RankingFacade;
 
 import java.util.ArrayList;
 import java.util.Arrays;
